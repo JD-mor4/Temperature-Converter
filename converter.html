@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="convert.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+
+    <div class="main" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000" >
+        <div class="tempinput">
+            <form action="">
+                <br>
+                <br>
+                    
+                    <label class="label" >Enter Temperature</label>
+                    <div class="input-section">
+                        <input type="number" id="value"  placeholder="Temperature">
+                        <select name="inputUnit" id="inputUnit">
+                            <option value="celcius">Celcius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+
+                    </div>
+
+                    <div class="converter" ><span><i class="fa-solid fa-arrow-down fa-xl"></i></span></div>
+            
+                    <span class="to">Convert</span> <br>
+                    
+                    <select name="outputUnit" id="outputUnit" >
+                        <option value="">Conversion Unit</option>
+                        <option value="celcius">celcius</option>
+                        <option value="fahrenheit">fahrenheit</option>
+
+                    </select> <br>
+
+                    <div class="btn">
+                        <button type="button" id="result-btn">Convert</button>
+
+                    </div><br><br>
+                    <div class="btn1" onclick="clear()">
+                        <button>All Clear</button>
+                    </div>
+                    <br>
+                    <br>
+            </form>
+        </div>
+
+        <div class="output">
+            <span class="result" id="convertedValue"><i class="fa-solid fa-temperature-high fa-lg" style="color: #fff;"></i></span>
+        </div>
+        
+    </div>
+    <script>
+        AOS.init();
+      </script>
+
+    <script src="js.js"></script>
+
+</body>
